@@ -73,7 +73,8 @@ To clone and run this project, you'll need:
 
 6. Check result in Postgres container
    ```bash
-   docker exec -it test_task psql -U postgres -d test_task_result -c 'SELECT * FROM results;'
+   docker exec -it test_task  \
+   psql -U postgres -d test_task_result -c 'SELECT * FROM results;'
    ```
 
 7. Delete Postgres container
