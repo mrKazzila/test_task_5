@@ -13,6 +13,8 @@ DELIMITER = ';'
 
 # DB settings
 DB_URL = 'postgresql://postgres:postgres@localhost:6432/test_task_result'
+DB_TABLE_NAME = 'results'
+DB_IF_TABLE_EXIST = 'replace'
 
 # Logging settings
 _LOG_LEVEL = logging.DEBUG

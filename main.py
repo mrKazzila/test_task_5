@@ -1,6 +1,6 @@
 import logging
 
-from settings import CSV_FILE, DELIMITER
+from settings import CSV_FILE, DB_TABLE_NAME, DELIMITER
 from src.data_handler import csv_handler
 from src.database import insert_df_to_db_table
 from src.exceptions import IncorrectHandelDataException
@@ -26,7 +26,7 @@ def main():
     )
 
     insert_df_to_db_table(
-        table_name='results',
+        table_name=DB_TABLE_NAME,
         data=handel_data_from_csv,
     )
     logger.info('insert data to database')
